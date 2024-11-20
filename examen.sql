@@ -22,7 +22,7 @@ DROP TABLE IF EXISTS Producto;
 CREATE TABLE Producto(
 Nombre_producto varchar(255), 
 Descripcion varchar(255), 
-Tamaño_producto float, 
+Tamaño_producto DECIMAL(5, 2), 
 Tipo_papel varchar(255), 
 Impresión varchar(255), 
 Acabado varchar(255));
@@ -39,8 +39,8 @@ CREATE TABLE Factura(
 Nfactura int
 Nombre_cliente varchar(255),
 Nombre_producto varchar(255), 
-pago float, 
-importe float, 
+pago DECIMAL(5, 2), 
+importe DECIMAL(5, 2), 
 envio varchar(255));
 
 
@@ -59,7 +59,7 @@ apellidos varchar(255),
 email varchar(255), 
 Telefonos varchar(255), 
 Direccion_emp varchar(255), 
-Salario float,
+Salario DECIMAL(5, 2),
 Nombre_departamento varchar(255));
 
 INSERT INTO Empleado (DNI, nombre, apellidos, email, Telefonos, Direccion_emp, Salario, Nombre_departamento)
