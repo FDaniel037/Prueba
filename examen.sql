@@ -44,7 +44,9 @@ Nombre_cliente varchar(255),
 Nombre_producto varchar(255), 
 pago DECIMAL(5, 2), 
 importe DECIMAL(5, 2), 
-envio varchar(255));
+envio varchar(255))
+ FOREIGN KEY (Nombre_cliente) REFERENCES Cliente(Nombre_cliente)
+ FOREIGN KEY (Nombre_producto) REFERENCES Producto(Nombre_producto);
 
 
 INSERT INTO Factura (Nfactura, Nombre_cliente, Nombre_producto, pago, importe, envio)
@@ -63,7 +65,8 @@ email varchar(255),
 Telefonos varchar(255), 
 Direccion_emp varchar(255), 
 Salario DECIMAL(5, 2),
-Nombre_departamento varchar(255));
+Nombre_departamento varchar(255))
+  FOREIGN KEY (Nombre_departamento) REFERENCES Departamento(Nombre_departamento);;
 
 INSERT INTO Empleado (DNI, nombre, apellidos, email, Telefonos, Direccion_emp, Salario, Nombre_departamento)
 VALUES
