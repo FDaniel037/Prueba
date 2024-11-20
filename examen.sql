@@ -19,19 +19,22 @@ VALUES
 ('72382134', 'Chimbote', 'Av. America', 'Frecuente', 'Antonio20@hotmail.com', 'Antonio', 'García Lu', '941245424');
 
 DROP TABLE IF EXISTS Producto;
-CREATE TABLE Producto(
-Nombre_producto varchar(255), 
-Descripcion varchar(255), 
-Tamaño_producto DECIMAL(5, 2), 
-Tipo_papel varchar(255), 
-Impresión varchar(255), 
-Acabado varchar(255));
 
-INSERT INTO Producto (Nombre_producto, Descripcion, Tamaño_producto, Tipo_papel, Impresión, Acabado)
-VALUES
-('Papel Fotográfico', 'Es un papel para imprimir fotos', '27,5', 'Fotografico', 'A4', 'Fino'),
-('Papel Folcote', 'Es un papel rigido tipo carton', '30', 'Folcote', 'A3', 'Grueso'),
-('Papel Bond', 'Es un papel en blanco', '27,5', 'Bond', 'A4', 'Fino');
+CREATE TABLE Producto(
+    Nombre_producto VARCHAR(255),
+    Descripcion VARCHAR(255),
+    Tamaño_producto DECIMAL(5, 2),
+    Tipo_papel VARCHAR(255),
+    Impresion VARCHAR(255),
+    Acabado VARCHAR(255)
+);
+
+INSERT INTO Producto (Nombre_producto, Descripcion, Tamaño_producto, Tipo_papel, Impresion, Acabado)
+VALUES 
+('Papel Fotográfico', 'Es un papel para imprimir fotos', 27.5, 'Fotografico', 'A4', 'Fino'),
+('Papel Folcote', 'Es un papel rigido tipo carton', 30, 'Folcote', 'A3', 'Grueso'),
+('Papel Bond', 'Es un papel en blanco', 27.5, 'Bond', 'A4', 'Fino');
+
 
 
 DROP TABLE IF EXISTS Factura;
