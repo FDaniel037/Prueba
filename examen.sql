@@ -18,23 +18,6 @@ VALUES
 ('83721853', 'Nuevo Chimbote', 'Av. Argentina', 'Frecuente', 'Carlo5@hotmail.com', 'Carlos', 'Conqui Mamani', '962345764'),
 ('72382134', 'Chimbote', 'Av. America', 'Frecuente', 'Antonio20@hotmail.com', 'Antonio', 'García Lu', '941245424');
 
-DROP TABLE IF EXISTS Factura;
-CREATE TABLE Factura(
-Nfactura int
-Nombre_cliente varchar(255),
-Nombre_producto varchar(255), 
-pago double(255), 
-importe double(255), 
-envio varchar(255));
-
-
-INSERT INTO Factura (Nfactura, Nombre_cliente, Nombre_producto, pago, importe, envio)
-VALUES
-('0001', 'Carlos', '', 'Frecuente', '40,90', '40.90', 'Recojo en tienda'),
-('0002', 'Antonio', '', 'Frecuente', '14', '13,99', 'Recojo en tienda'),
-('0003', 'Patricio', '', 'Frecuente', '10', '8', 'Recojo en tienda');
-
-
 DROP TABLE IF EXISTS Producto;
 CREATE TABLE Producto(
 Nombre_producto varchar(255), 
@@ -50,6 +33,22 @@ VALUES
 ('Papel Folcote', 'Es un papel rigido tipo carton', '30', 'Folcote', 'A3', 'Grueso'),
 ('Papel Bond', 'Es un papel en blanco', '27,5', 'Bond', 'A4', 'Fino');
 
+
+DROP TABLE IF EXISTS Factura;
+CREATE TABLE Factura(
+Nfactura int
+Nombre_cliente varchar(255),
+Nombre_producto varchar(255), 
+pago double(255), 
+importe double(255), 
+envio varchar(255));
+
+
+INSERT INTO Factura (Nfactura, Nombre_cliente, Nombre_producto, pago, importe, envio)
+VALUES
+('0001', 'Carlos', 'Papel Fotográfico', 'Frecuente', '40,90', '40.90', 'Recojo en tienda'),
+('0002', 'Antonio', 'Papel Falcote', 'Frecuente', '14', '13,99', 'Recojo en tienda'),
+('0003', 'Patricio', 'Papel Bond', 'Frecuente', '10', '8', 'Recojo en tienda');
 
 
 DROP TABLE IF EXISTS Empleado;
